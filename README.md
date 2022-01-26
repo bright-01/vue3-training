@@ -22,3 +22,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+### VUE Style Guide [필독]
+https://v3.ko.vuejs.org/style-guide/
