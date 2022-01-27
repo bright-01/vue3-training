@@ -4,6 +4,8 @@
     <p>content : {{state.content}}</p>
     <button @click="test">test button</button>
     <p>{{counter}}</p>
+    <p>{{counter2.number}}</p>
+    <p>{{counter3}}</p>
     <p>{{book.title2}}</p>
     <button ref="myButton">ref button</button>
   </div>
@@ -67,10 +69,19 @@ export default {
       console.log('called test')
     }
 
+    /**
+     * ref와 reactive의 차이점..
+     * ref : 계산 속성이 사용 불가능, 원시적?? stirng, true, 12, ...=> 나중에 재할당
+     * reactvie : 계산 속성 가능, 재할당이 필요 없음..객체
+     * */
     const counter = ref(0);
-    counter.value++;
-
+    const counter2 = ref({number : 0});
+    const counter3 = ref(123);
     const book = reactive({title2 : 'Vue3 setUp Guide'});
+
+    counter.value++; // ref에 접근 해야되기 때문에 .value를 사용 해야한다. ( vue2.x가 this.을 사용한것처럼... )
+    counter2.value.number ++;
+
 
 
     const refButton = ref(null);
@@ -80,7 +91,7 @@ export default {
 
     return {
       state, test,
-      counter, book,
+      counter, counter2, counter3, book,
       refButton
     }
   }
