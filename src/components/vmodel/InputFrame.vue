@@ -1,22 +1,21 @@
 <template>
-  <MyInput v-model="inputText"></MyInput>
+  <my-input v-model="inputText"></my-input>
 </template>
 
 <script>
-
 import MyInput from "@/components/vmodel/MyInput";
-
 export default {
-  components: {
-    MyInput
-  },
-  data() {
+  name: "InputFrame",
+  components: {MyInput},
+  data: function () {
     return {
       inputText: ''
     }
   }
 }
+
 </script>
 
-<style>
+<style scoped>
+
 </style>
