@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "MultiEventHandler",
+  name: "MultiEventHandlerComponent",
   methods:{
     logText(event){
       console.log(event);

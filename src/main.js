@@ -1,4 +1,8 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import {reactive} from "vue";
 
-createApp(App).mount('#app')
+
+const app = createApp(App).use(reactive);
+
+app.mount('#app')
