@@ -23,6 +23,18 @@ import {ref, toRefs, reactive, onMounted} from "vue";
  *
  * 반환한 객체는 템플릿 표현식에서 사용할 수 있음.
  *
+ *
+ *
+ *
+ *
+ * ref, reactive 차이
+ ref는 function에서 값을 변경할 때 ref.value를 넣어주고 값을 바꾸나 reactive는 바로 값을 바꿀 수 있습니다.
+ reactive는 원시값에 대해서는 반응형을 가지지 않습니다. (string, number 값은 값을 바꾸어도 reactive하게 리렌더링 되지 않는다) 그래서 객체나 배열을 사용하는 경우에만 reactive를 사용할 수 있습니다, 그러나 ref는 원시값도 반응형 값으로 취급되어 리렌더링 됩니다.
+ reactive나 ref나 둘 중 하나만 사용하는 것이 옳다고 생각합니다. 그런데 reactive는 원시값을 반응형으로 사용되지 않기 때문에 ref를 처음부터 끝까지 사용하는 것이 좋다고 생각합니다.
+ #computed & watch
+ *
+ *
+ *
  * */
 export default {
   name: "SetUpMethodComponent",
