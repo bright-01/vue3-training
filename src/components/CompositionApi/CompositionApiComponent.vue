@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import {ref, computed, reactive, watch} from "vue";
+import {computed, reactive} from "vue";
 
 export default {
   name: "CompositionApiComponent",
@@ -35,11 +35,6 @@ export default {
   setup(props, {attrs, slots, emit}) {
 
     console.log("props :" , props);
-
-    const counter = ref(0)
-    watch(counter, (newValue, oldValue) => {
-      console.log('새로운 counter 값: ' + counter.value)
-    })
 
     const state = reactive({
       username: '',
